@@ -162,4 +162,4 @@ def update_bar_chart(trial_name, cow, factor):
     return fig
 
 if __name__ == '__main__':
-    app.run(jupyter_mode="tab")
+    app.run()
