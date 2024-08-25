@@ -2,12 +2,9 @@ import pandas as pd
 import os
 import numpy as np
 import plotly.graph_objects as go
-
-from dash import Dash, dcc, html, Input, Output,callback,  dash_table
-from dash import jupyter_dash
+from dash import Dash, dcc, html, Input, Output, callback,  dash_table
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-from dash import no_update
 
 
 # 1 
