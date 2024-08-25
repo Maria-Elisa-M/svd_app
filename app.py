@@ -114,7 +114,9 @@ content = html.Div(
 
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+server = app.server
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
+
 
 @app.callback(
     Output('cows-dpdn', 'options'),
