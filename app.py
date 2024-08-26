@@ -56,8 +56,8 @@ def plot_teat(trial_name, cow, factor, ti):
             points = vec[0]
             color = vec[1]
             fig.add_trace(go.Scatter3d(x= points[:, 0], y = points[:, 1], z=points[:, 2], mode='lines', marker=dict(color=color, size = 2), name = color))
-            fig.update_layout(paper_bgcolor="black", font_color = "white", plot_bgcolor = "black")
-            fig.update_scenes(xaxis_visible=False, yaxis_visible=False,zaxis_visible=False)
+        fig.update_layout(paper_bgcolor="black", font_color = "white", plot_bgcolor = "black")
+        fig.update_scenes(xaxis_visible=False, yaxis_visible=False,zaxis_visible=False)
     return fig
 
 # the style arguments for the sidebar. We use position:fixed and a fixed width
@@ -88,7 +88,7 @@ sidebar = html.Div(
         html.H2("SVD", className="display-4"),
         html.Hr(),
         html.P(
-            "choose a preprocessing option, factor fot the threshold, and a cow", className="lead"
+            "choose a preprocessing option, factor for the threshold, and a cow", className="lead"
         ),
         html.Label("Trial mane:"),
         dcc.Dropdown(id='tn-dpdn',options= trial_dict, value = 'vol', style = MENU_STYLE),
@@ -112,10 +112,10 @@ content = html.Div(
              ])
 ], id="page-content", style=CONTENT_STYLE)
 
-
 app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 server = app.server
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
+
 
 
 @app.callback(
